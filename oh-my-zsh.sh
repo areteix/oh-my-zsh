@@ -51,16 +51,19 @@ ZSH_COMPDUMP="${ZDOTDIR:-${HOME}}/.zcompdump-${SHORT_HOST}-${ZSH_VERSION}"
 # Load and run compinit
 autoload -U compinit
 compinit -i -d "${ZSH_COMPDUMP}"
+# echo $ZSH_CUSTOM
+# echo $plugins
 
 # Load all of the plugins that were defined in ~/.zshrc
 for plugin ($plugins); do
+  # echo "Loading " $plugin "..."
   if [ -f $ZSH_CUSTOM/plugins/$plugin/$plugin.plugin.zsh ]; then
     source $ZSH_CUSTOM/plugins/$plugin/$plugin.plugin.zsh
   elif [ -f $ZSH/plugins/$plugin/$plugin.plugin.zsh ]; then
     source $ZSH/plugins/$plugin/$plugin.plugin.zsh
   fi
 done
-
+# echo "Done loading plugins"
 # Load all of your custom configurations from custom/
 for config_file ($ZSH_CUSTOM/*.zsh(N)); do
   source $config_file
