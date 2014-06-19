@@ -28,6 +28,11 @@ if [[ -x `which yaourt` ]]; then
   fi
   alias yainsd='yaourt -S --asdeps'        # Install given package(s) as dependencies of another package
   alias yamir='yaourt -Syy'                # Force refresh of all package lists after updating /etc/pacman.d/mirrorlist
+  alias yacleancache='sudo pacman -Sc'     # Clean pacman cache
+  alias yaown='yaourt -Qo'                 # Package that owns the given file
+  alias yaourtSyu="yaourt -Syu --ignore intel-dri --ignore mesa-libgl --ignore glamor-egl" # ignore some packages during upgrade
+  alias pacro="/usr/bin/pacman -Qtdq > /dev/null && sudo /usr/bin/pacman -Rns \$(/usr/bin/pacman -Qtdq | sed -e ':a;N;\$!ba;s/\n/ /g')" # Remove orphans
+
 else
  upgrade() {
    sudo pacman -Syu
