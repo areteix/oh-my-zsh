@@ -77,17 +77,18 @@ POWERLINE_DIR=/home/praveen/workspace/powerline
 . $POWERLINE_DIR/powerline/bindings/zsh/powerline.zsh
 
 ## Setup zsh-autosuggestions
-#source $HOME/.zsh-autosuggestions/autosuggestions.zsh
+source $HOME/.zsh-autosuggestions/autosuggestions.zsh
 
 ## Enable autosuggestions automatically
-#zle-line-init() {
-#    zle autosuggest-start
-#}
-#zle -N zle-line-init
+zle-line-init() {
+    zle autosuggest-start
+}
+zle -N zle-line-init
 #
 ## use ctrl+t to toggle autosuggestions(hopefully this wont be needed as
 ## zsh-autosuggestions is designed to be unobtrusive)
-#bindkey '^T' autosuggest-toggle
-#zstyle ':completion:*:manuals'    separate-sections true
-#zstyle ':completion:*:manuals.*'  insert-sections   true
-#zstyle ':completion:*:man:*'      menu yes select
+bindkey '^T' autosuggest-toggle
+zstyle ':completion:*:manuals'    separate-sections true
+zstyle ':completion:*:manuals.*'  insert-sections   true
+zstyle ':completion:*:man:*'      menu yes select
+bindkey '^f' vi-forward-word
