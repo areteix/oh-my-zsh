@@ -11,7 +11,6 @@ zmodload zsh/net/socket
 
 source "${0:a:h}/completion-client.zsh"
 
-echo "z1"
 # configuration variables
 AUTOSUGGESTION_HIGHLIGHT_COLOR='fg=8'
 AUTOSUGGESTION_HIGHLIGHT_CURSOR=1
@@ -26,10 +25,8 @@ function {
 	if is-at-least 5.0.3; then
 		autosuggest-ensure-server
 	fi
-    echo "z4"
 }
 
-echo "z5"
 ZLE_AUTOSUGGEST_SUSPEND_WIDGETS=(
 vi-cmd-mode vi-backward-char backward-char backward-word beginning-of-line
 history-search-forward history-search-backward up-line-or-history
@@ -253,7 +250,6 @@ autosuggest-invalidate-highlight-cache() {
 	# invalidate the buffer for zsh-syntax-highlighting
 	_ZSH_HIGHLIGHT_PRIOR_BUFFER=''
 }
-echo "z2"
 zle -N autosuggest-toggle
 zle -N autosuggest-start
 zle -N autosuggest-accept-suggested-small-word
@@ -273,7 +269,6 @@ zle -A self-insert autosuggest-self-insert-orig
 zle -A magic-space autosuggest-magic-space-orig
 zle -A backward-delete-char autosuggest-backward-delete-char-orig
 zle -A accept-line autosuggest-accept-line-orig
-echo "z3"
 
 for widget in ${ZLE_AUTOSUGGEST_ACCEPT_WIDGETS} ${ZLE_AUTOSUGGEST_SUSPEND_WIDGETS} ${ZLE_AUTOSUGGEST_COMPLETION_WIDGETS}; do
 	[[ -z $widgets[$widget] ]] && continue
