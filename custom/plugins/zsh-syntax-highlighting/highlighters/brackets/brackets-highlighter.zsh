@@ -41,7 +41,8 @@
 # Whether the brackets highlighter should be called or not.
 _zsh_highlight_brackets_highlighter_predicate()
 {
-  _zsh_highlight_cursor_moved || _zsh_highlight_buffer_modified
+#  _zsh_highlight_cursor_moved || _zsh_highlight_buffer_modified
+   _zsh_highlight_buffer_modified
 }
 
 # Brackets highlighting function.

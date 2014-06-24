@@ -6,8 +6,8 @@ ZLE_DISABLE_AUTOSUGGEST=1
 PROMPT=
 
 # load completion system
-autoload compinit
-compinit
+# autoload compinit
+# compinit
 
 # never run a command
 bindkey '\C-m' .kill-buffer

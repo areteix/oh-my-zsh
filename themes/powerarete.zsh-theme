@@ -39,7 +39,7 @@ function _collapse_pwd {
 }
 
 
-PROMPT='%{$bg[white]$fg[blue]%}$(_collapse_pwd)%{$reset_color%}%{$fg[white]%}%{$reset_color%} '
+PROMPT='%{$bg[white]$fg[blue]%}$(_collapse_pwd)%{$reset_color%}%{$fg[white]%}%{$fg_bold[green]%}%{$reset_color%} '
 
 # The right-hand prompt
 
@@ -53,7 +53,7 @@ time_enabled="%(?.%{$fg[green]%}.%{$fg[red]%})%*%{$reset_color%}"
 time_disabled="%{$fg[green]%}%*%{$reset_color%}"
 time=$time_enabled
 
-ZSH_THEME_GIT_PROMPT_PREFIX=" ☁  %{$fg[red]%}"
+ZSH_THEME_GIT_PROMPT_PREFIX=" ☁  %{$fg_bold[red]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[yellow]%} ✎" # ☂" # Ⓓ
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[cyan]%} ✭" # ⓣ
