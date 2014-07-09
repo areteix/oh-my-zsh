@@ -15,3 +15,9 @@ alias -s jpg=feh
 alias -s png=feh
 
 alias code="cd $HOME/workspace/; ls"
+
+alias gn="geeknote"
+alias gnedit="geeknote edit"
+alias gn="geeknote"
+alias gn="geeknote"
+alias gsync="cd /media/data/googledrive && grive"
