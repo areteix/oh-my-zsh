@@ -14,7 +14,7 @@ alias -s mpeg="smplayer 2>/dev/null"
 alias -s jpg=feh
 alias -s png=feh
 alias acroread="acroread 2>/dev/null"
-alias code="cd $HOME/workspace/; ls"
+alias code="cd $HOME/src/; ls"
 
 alias gn="geeknote"
 alias gnedit="geeknote edit"
