@@ -2,14 +2,9 @@
 if [ -z "$HISTFILE" ]; then
     HISTFILE=$HOME/.zsh_history
 fi
-<<<<<<< HEAD
-HISTSIZE=1000
-SAVEHIST=1000
-=======
 
 HISTSIZE=10000
 SAVEHIST=10000
->>>>>>> upstream/master
 
 # Show history
 case $HIST_STAMPS in
