@@ -15,14 +15,11 @@ alias -s png=feh
 alias acroread="acroread 2>/dev/null"
 alias code="cd $HOME/src/; ls"
 
-alias gn="geeknote"
-alias gnedit="geeknote edit"
-alias gn="geeknote"
-alias gn="geeknote"
-alias gsync="cd /media/data/googledrive && grive"
 alias sshint="ssh root@192.168.1.2"
 alias sshof="ssh root@192.168.1.1"
 
 alias pinggoog="ping -c 4 google.com"
 alias upbright="xbacklight -inc 10"
 alias downbright="xbacklight -dec 10"
+
+alias rlwrap="rlwrap -pBlue -r -A"
